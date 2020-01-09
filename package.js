@@ -17,7 +17,7 @@ var page = 0;
         if (page == 1) {
           document.getElementById('contents').innerHTML = '<br><br><br><br><br><br>By continuing, you acknowledge that your project is as minified as possible (3 sprites maximum), does not contain any backdrop scripts, and will not alter system gOS code.<br><br><a href = "javascript:nextPage();"><img width = "50px" src = "nextBtn.png">';
         } else if (page == 2) {
-          document.getElementById('contents').innerHTML = '<br><br><br><br><br><br>You also understand that the Green OS team reserves the right to modify your submission to make it compatible with Green OS.  If you would like to preview your project before submission, you can do so on the next page.<br><br><a href = "javascript:nextPage();"><img width = "50px" src = "nextBtn.png">';
+          document.getElementById('contents').innerHTML = '<br><br><br><br><br><br>You also understand that the Green OS team reserves the right to modify your submission to make it compatible with Green OS.  If you would like to preview your project before submission, you will be able to do so on the next page.<br><br><a href = "javascript:nextPage();"><img width = "50px" src = "nextBtn.png">';
         } else if (page == 3) {
           document.getElementById('contents').innerHTML = '<br><br><br><br><br><br><iframe height = "360px" width = "480px" src = "https://forkphorus.github.io/app.html?id=' + projectID + '"></iframe><br><br><a href = "javascript:nextPage();"><img width = "50px" src = "nextBtn.png">';
         } else if (page == 4) {
