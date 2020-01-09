@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Green OS Packager</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet">
+    <link href="packager.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <nav id = "navbar">
+      <img src = "logo.png" class = "navImg">
+    </nav>
+    <div class = "header">
+    <br><br><br><br><br><br>
+    <h1>Packager</h1>
+    <br>
+    </div>
+    <div class = "options">
+      <div class = "col">
+        <input id = "projectID" class = "project_link" type = "search" placeholder="Scratch project URL" onsearch = "getProject();"></input>
+        <div id = "info1">
+        </div>
+      </div>
+    </div>
+    <script>
+      function getProject() {
+        document.getElementById("navbar").style.backgroundColor = "white";
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            var projectParsed = JSON.parse(this.responseText);
+            var thumb = projectParsed.image;
+            var title = projectParsed.title;
+            var id = document.getElementById('projectID').value;
+            document.getElementById("info1").innerHTML = '<br><img width = "200px" class = "project-image imageFade" src = "' + thumb + '"><br><p>' + title + '</p><br><a href = "package-project.html?project=' + id + '"><img class = "imageFade" width = "50px" src = "nextBtn.png"></a>';
+          };
+        };
+        xhttp.open("GET", "https://cors-anywhere.herokuapp.com/api.scratch.mit.edu/projects/" +document.getElementById('projectID').value, false);
+        xhttp.send();
+      }
+    </script>
+  </body>
+</html>
