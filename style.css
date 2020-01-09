@@ -8,6 +8,11 @@
   to {opacity: 1;}
 }
 
+@keyframes fallinbutton{
+  from {opacity: 0; top: -500px}
+  to {opacity: 1; top: 35px;}
+}
+
 nav {
   background-color: rgba(255, 255, 255, 30%);
   text-align: center;
@@ -55,11 +60,20 @@ h1 {
 }
 
 .header-buttons {
+  opacity: 0;
+  position: relative;
   text-align: center;
+  animation-name: fallinbutton;
+  animation-duration: 2s;
+  animation-delay: 0.8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  z-index: 0.5;
 }
 
 .big-button {
-  opacity: 0;
+  opacity: 1;
   text-decoration: none;
   background-color: white;
   padding: 15px;
@@ -70,11 +84,6 @@ h1 {
   font-family: 'Raleway', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   transition: color 0.25s;
   transition: background-color 0.25s;
-  animation-name: fadeinimage;
-  animation-duration: 2s;
-  animation-delay: 0.8s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
   text-align: center;
   font-size: 0.75em;
 }
