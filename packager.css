@@ -17,6 +17,13 @@
   animation-fill-mode: forwards; 
 }
 
+.small-gray {
+  margin-top: 10px;
+  font-size: 0.75em !important;
+  color: gray !important;
+  font-family: 'Raleway', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 nav {
   background-color: rgba(255, 255, 255, 30%);
   text-align: center;
@@ -162,7 +169,7 @@ h3 {
   padding-left: 30px;
   padding-right: 30px;
 }
-.options p {
+.options p:not(.small-gray) {
   font-size: 1em;
   font-family: 'Raleway', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: rgba(29, 36, 79, 0%);
