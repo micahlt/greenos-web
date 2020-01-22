@@ -34,7 +34,7 @@
             var thumb = projectParsed.image;
             var title = projectParsed.title;
             var id = document.getElementById('projectID').value;
-            document.getElementById("info1").innerHTML = '<br><img width = "200px" class = "project-image imageFade" src = "' + thumb + '"><br><p>' + title + '</p><br><a href = "package-project.html?project=' + id + '"><img class = "imageFade" width = "50px" src = "nextBtn.png"></a>';
+            document.getElementById("info1").innerHTML = '<br><img width = "200px" class = "project-image imageFade" src = "' + thumb + '"><br><p>' + title + '</p><br><a href = "package-project?project=' + id + '"><img class = "imageFade" width = "50px" src = "nextBtn.png"></a>';
           };
         };
         xhttp.open("GET", "https://cors-anywhere.herokuapp.com/api.scratch.mit.edu/projects/" +document.getElementById('projectID').value, false);
