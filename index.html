@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
+  <body id = "body">
     <nav id = "navbar">
       <img src = "logo.png" class = "navImg">
     </nav>
@@ -16,10 +16,9 @@
     <br><br><br><br><br><br>
     <h1>Green OS</h1>
     <br>
-    <h2>the future of OS Wars 5<br><br><br><br></h2>
+    <h2>sleek, fast, and simple<br><br><br><br></h2>
     <div class = "header-buttons">
-      <a href = "http://qr.w69b.com/g/oE8qcLW8w" class = "big-button">LATEST VERSION</a>
-      <a href = "https://scratch.mit.edu/discuss/topic/375734/?page=1#post-3755329" class = "big-button green-text">CONTRIBUTE</a>
+      <a href = "http://qr.w69b.com/g/oE8qcLW8w" class = "big-button">OPEN THE OS</a>
     </div>
     </div>
     <div class = "options">
@@ -28,14 +27,14 @@
       <h3>Actions</h3>
       <p>Automated tasks for built-in and added gOS apps</p><br>
       <br>
-      <a target = "new" href = "	https://form.jotform.com/MicahLT/suggest-new-actions" class = "action-button">SUGGEST ACTIONS</a>
+      <a target = "new" href = "javascript:showModal();" class = "action-button">SUGGEST ACTIONS</a>
       <br><br><br><br></div>
       <div class = "col">
       <img src = "packager.png" class = "smallImage">
       <h3>Packages</h3>
       <p>Get your custom app implemented into gOS</p><br>
       <br>
-      <a href = "https://green.micahlindley.com/packager" class = "action-button">SUBMIT PACKAGE</a>
+      <a href = "javascript:showModal();" class = "action-button">SUBMIT PACKAGE</a>
       <br><br><br><br>
       </div>
       <div class = "col">
@@ -43,8 +42,19 @@
       <h3>Hosting</h3>
       <p>Register your web address and get your site on Fizzle</p><br>
       <br>
-      <a target = "new" href = "	https://form.jotform.com/MicahLT/fizzle-website-submission" class = "action-button">REGISTER WEBSITE</a>
+      <a target = "new" href = "	javascript:showModal();" class = "action-button">REGISTER WEBSITE</a>
       <br><br><br><br></div>
+    </div>
+    <div id = "modal" onclick = "destroyModal()">
+      <div class = "modalBox">
+      <div class = "modalContent">
+        <h1>It's been a good run.</h1>
+        <br>
+        <img src = "logo.png">
+        <br>
+        <p>OS Wars 5 has ended, and we did a good job!  Team Green worked until the very last seconds of the competition, and judging has commenced.  Thank you for being part of our journey!</p>
+      </div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

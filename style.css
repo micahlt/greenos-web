@@ -204,5 +204,59 @@ h3 {
 
 .col {
   flex: 50%;
+}
 
+#modal {
+  background-color: rgba(255, 255, 255, 80%);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: none;
+}
+
+.modalBox {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  background-color: #00C98F;
+  border-radius: 3px;
+  box-shadow: rgba(0,0,0,50%) 0 0 20px;
+}
+
+.modalContent {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  padding: 12px;
+}
+
+.modalContent > h1 {
+  font-size: 2em;
+}
+
+.modalContent > p {
+  opacity: 0;
+  color: black;
+  padding: 20px;
+  animation-name: fadeinimage;
+  animation-duration: 2s;
+  animation-delay: 0.7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.modalContent > img {
+  opacity: 0;
+  width: 30%;
+  animation-name: fadeinimage;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }

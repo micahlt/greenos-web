@@ -1,3 +1,4 @@
+showModal();
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -8,4 +9,12 @@ function scrollFunction() {
     document.getElementById("navbar").style.backgroundColor = "rgba(255, 255, 255, 30%)";
     document.getElementById("navbar").style.boxShadow = "none";
   }
+}
+
+function destroyModal() {
+  document.getElementById("modal").style.display = "none";
+}
+
+function showModal() {
+  document.getElementById("modal").style.display = "block";
 }
